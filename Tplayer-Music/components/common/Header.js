@@ -50,7 +50,7 @@ export function Header() {
         if (e.code === "Space") dispatch({ type: "TOGGLE" });
       }
     };
-  }, []);
+  }, [dispatch]);
 
   const handleNewSong = (song)=>{
     // console.log("New Song", song);

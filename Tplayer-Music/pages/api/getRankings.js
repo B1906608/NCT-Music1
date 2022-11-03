@@ -1,7 +1,8 @@
 import { ZingMp3 } from "zingmp3-api-full/dist";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function(req, res) {
-    ZingMp3.getDetailPlaylist("6B6A7ZC9").then((data) => {
+    ZingMp3.getDetailPlaylist("ZO68OC68").then((data) => {
         const songs = data.data.song.items;
         const list = [];
 

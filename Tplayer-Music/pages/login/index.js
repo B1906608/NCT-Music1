@@ -1,7 +1,8 @@
 import { faCircleXmark, faSearch, faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import cls from "classnames";
 import Link from "next/link";
-
+import styles from "../../scss/player/NavBar.module.scss";
 
 export default function Login() {  return (
  <div style={{display:"block", width:"fit-content", height:"300px", margin:"0 auto"}}>

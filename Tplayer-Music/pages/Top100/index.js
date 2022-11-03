@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useReducer, useState } from "react";
 import { Header } from "../../components/common/Header";
 import { PlayerCotrol, PlayList } from "../../components/player/";
-import NavBar from "../../components/player/NavBar";
+import NavBar from "../../components/Top100/NavBar";
 import MusicPlayerContext from "../../context/MusicPlayerContext";
 import songReducer from "../../reducers/SongReducer";
 import styles from "../../scss/player/index.module.scss";
@@ -61,7 +61,7 @@ export default function Player(props) {
 // This gets called on every request
 export async function getServerSideProps() {
   console.log("ENV", process.env.HOST);
-  const res = await fetch(`${process.env.HOST}/api/getHome`);
+  const res = await fetch(`${process.env.HOST}/api/getTop100`);
   const data = await res.json();
   const songs = data.data;
   // Pass data to the page via props

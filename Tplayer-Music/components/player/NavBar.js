@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import {
   faCircleDot,
   faHeart,
@@ -16,44 +17,55 @@ function NavBar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        <Image
-          src="/images/logo.png"
-          width={50}
-          height={50}
-          layout="responsive"
-        />
+      <Link href="/player">
+            <Image
+              src="/images/logo.png"
+              width={50}
+              height={50}
+              layout="responsive"
+            />
+          </Link>
       </div>
       <div className={styles.links}>
         <ul>
-          <li className={cls(styles.active)}>
-              {/* <Link href={"/pages/player"}> */}
+          <Link href={"/player"}>
+            <li className={cls(styles.active)}>
               <FontAwesomeIcon icon={faMusic} />
               <span>Trang chủ</span>
-            {/* </Link> */}
-          </li>
-          <li>
-            <Link href={"/pages/Liked"}>
-            <FontAwesomeIcon icon={faHeart} />
-            <span>Yêu thích</span>
+            </li>            
+          </Link>
+
+          <Link href={"/Liked"}>
+            <li>
+              <FontAwesomeIcon icon={faHeart} />
+              <span>Yêu thích</span>            
+            </li>
+          </Link>
+
+          <Link href={"/Top100"}>
+            <li>
+              <FontAwesomeIcon icon={faStar} />
+              <span>Top 100</span>
+            </li>
+          </Link>
+
+          <Link href={"/Rankings"}>
+              <li>
+                <FontAwesomeIcon icon={faRankingStar} />
+                <span>Bảng xếp hạng</span>
+              </li>
             </Link>
-          </li>
-          <li>
-            <Link href={"/pages/Top100"}>
-            <FontAwesomeIcon icon={faStar} />
-            <span>Top 100</span>
-            </Link>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faRankingStar} />
-            <span>Bảng xếp hạng</span>
-          </li>
+
+          <Link href={"/NewMusic"}>
+            <li>
+              <FontAwesomeIcon icon={faCircleDot} />
+              <span>Nhạc mới</span>
+            </li>
+          </Link>
+
           <li>
             <FontAwesomeIcon icon={faShapes} />
             <span>Danh mục</span>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faCircleDot} />
-            <span>Khám phá</span>
           </li>
         </ul>
       </div>
