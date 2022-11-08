@@ -81,10 +81,10 @@ export function Header() {
         </div>
         <div className={cls(styles.links)}>
           <div>
-            <FontAwesomeIcon icon={faMoon} style={{fontSize: "30px"}} />
+            <FontAwesomeIcon icon={faMoon} />
           </div>
           <div>
-            <FontAwesomeIcon icon={faGear} style={{fontSize: "30px" ,marginLeft: "20px", marginRight: "20px"}} />
+            <FontAwesomeIcon icon={faGear} />
           </div>
           <div style={{position: "absolute", marginRight: "20px"}}>
             <Image
@@ -98,11 +98,11 @@ export function Header() {
           />
             <div style={{position: "absolute", width: "120px", right: "5px"}}>
               <ul id="account" style={{marginTop: "10px", borderRadius: "10px"}}>
-                <Link href={"/login"}>
+                <Link href={"/Signin"}>
                   <li style={{textAlign:"center",marginBottom: "5px", borderBottom: "2px solid #000", borderRadius: "20px", padding: "10px", backgroundColor: "grey"}}>
                     Đăng nhập</li>
                 </Link>
-                <Link href={"/resigter"}>
+                <Link href={"/Signup"}>
                   <li style={{textAlign: "center", borderRadius: "20px", padding: "10px", backgroundColor: "grey"}}>
                     Đăng ký</li>
                 </Link>
